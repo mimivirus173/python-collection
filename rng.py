@@ -6,7 +6,10 @@ points = 0
 
 # Game
 while True:
+    # Player's input
     num = int(input("Write a number between 1 and 99: "))
+    
+    # Check if input is valid
     if num <= 99 and num > 0:
         # Random number
         roll = random.randint(1,100)
