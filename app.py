@@ -6,9 +6,8 @@ rand = random.randint(1,100)
 points = 0
 
 # Game
-while 1==1:    
+while True:
     input = int(input("Write a number between 1 and 99: "))
-
     if input <= 99 and input >= 0:
         # Random number
         roll = random.randint(1,100)
@@ -21,9 +20,16 @@ while 1==1:
 
             print("Current score:",points)
             print("--------------------")
-            continue
         else:
             print("You lost!")
-        
+
+            print("Final score:",points)
+            print("--------------------")
             points == 0
-            continue
+
+    play_again = input("Play again? (y/n): ").lower()
+
+    if play_again != "y":
+        break
+
+print("Game over.")
