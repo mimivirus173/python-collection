@@ -1,2 +1,5 @@
-# rng-game-python
- RNG game but Python
+# python-collection
+ Collection of small Python projects made by me
+ 
+ **Current content:**
+ - RNG score game
