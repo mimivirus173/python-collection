@@ -7,14 +7,17 @@ points = 0
 
 # Game
 while True:
-    # Player's input
+    # Check if input is valid
     try:
+        # Player input gets checked if it's an integer or no
         num = int(input("Write a number inbetween 0 and 100: "))
     except ValueError:
+        # When eror
         print("Invalid input!")
         print("Your input must be an integer!")
         continue
     else:
+        # Check if the number is between 0 and 100
         if num <= 99 and num > 0:
             # Random number
             roll = random.randint(1,100)
@@ -32,6 +35,7 @@ while True:
                 # Clear screen
                 os.system('cls')
             
+                # Print loss text
                 print("You lost!")
                 print("Final score:",points)
                 print("--------------------")
