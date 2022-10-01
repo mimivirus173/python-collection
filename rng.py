@@ -1,5 +1,6 @@
 import numbers
 import random
+import os
 
 # Variables
 points = 0
@@ -10,7 +11,7 @@ while True:
     num = int(input("Write a number between 1 and 99: "))
     
     # Check if input is valid
-    if num <= 99 and num > 0:
+    if num <= 99 and num > 0 and type(input) == int:
         # Random number
         roll = random.randint(1,100)
 
@@ -25,6 +26,7 @@ while True:
             print("Current score:",points)
             print("--------------------")
         else:
+            os.system('cls')
             print("You lost!")
 
             print("Final score:",points)
@@ -32,11 +34,4 @@ while True:
             points == 0
     else:
         print("Invalid input!")
-
-    # Prompt user to play again (very annoying, but idk another way to make it restart)
-    play_again = input("Play again? (y/n): ").lower()
-
-    if play_again != "y":
-        break
-
-print("Game over.")
+    continue
