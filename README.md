@@ -3,3 +3,4 @@
  
  **Current content:**
  - RNG score game
+ - Password generator (16-56 characters)
