@@ -42,5 +42,5 @@ while True:
                 points == 0
         else:
             print("Invalid input!")
-            print("Your number must be inbetween 0 and 100! (from 1-99)")
+            print("Your number must be inbetween 0 and 100!")
         continue
