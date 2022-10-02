@@ -9,10 +9,9 @@ points = 0
 while True:
     # Check if input is valid
     try:
-        # Player input gets checked if it's an integer or no
+        # Input gets checked if it's an integer or not
         num = int(input("Write a number inbetween 0 and 100: "))
     except ValueError:
-        # When eror
         print("Invalid input!")
         print("Your input must be an integer!")
         continue
