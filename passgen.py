@@ -12,7 +12,7 @@ print("Press any key:")
 
 while True:
     if keyboard.read_key():
-        length = random.randint(16,56)
+        length = random.randint(8,64)
         stringle = "".join(random.sample(string,length))
         print(stringle)
         continue

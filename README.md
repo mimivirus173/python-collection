@@ -3,7 +3,7 @@
  
  **Current content:**
  - RNG score game
- - Password generator (16-56 characters)
+ - Password generator (8-64 characters)
  - Key registerer
  - Keypress logger (doesn't work properly when you hold a key down)
  - Guess the number
