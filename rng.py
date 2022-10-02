@@ -38,7 +38,7 @@ while True:
                 print("You lost!")
                 print("Final score:",points)
                 print("--------------------")
-                points == 0
+                points = 0
         else:
             print("Invalid input!")
             print("Your number must be inbetween 0 and 100!")
