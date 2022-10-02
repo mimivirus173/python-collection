@@ -8,6 +8,8 @@ symbols = "!#¤%&/()=?@£${[]}+,.-'*"
 
 string = lower + upper + numbers + symbols
 
+print("Press any key:")
+
 while True:
     if keyboard.read_key():
         length = random.randint(16,56)
