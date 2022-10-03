@@ -29,8 +29,9 @@ while True:
                 print("You win!")
                 
                 # Points
-                print("You gain 1 point.")
-                points += (lim2 - lim1)
+                pointgain = (lim2 - lim1)
+                points += pointgain
+                print("You gain",pointgain,"point(s).")
                 
                 print("Current score:",points)
                 print("--------------------")
