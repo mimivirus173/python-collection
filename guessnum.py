@@ -37,7 +37,8 @@ while True:
             elif guess != num:
                 os.system('cls')
                 print("You lost!")
-                
+                print("The number was:",num)
+
                 print("Final score:",points)
                 print("--------------------")
                 points = 0
