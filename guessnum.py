@@ -12,6 +12,7 @@ while True:
         lim2 = int(input("Upper limit for the random number: "))
     except ValueError:
         print("Invalid input!")
+        print("--------------------")
     else:
         # The computer's number
         num = random.randint(lim1, lim2)
@@ -21,6 +22,7 @@ while True:
             guess = int(input("Guess the number: "))
         except ValueError:
             print("Invalid input!")
+            print("--------------------")
         else:
             # The game
             if guess == num and guess >= lim1 and guess <= lim2:
@@ -41,4 +43,5 @@ while True:
                 points = 0
             else:
                 print("Invalid input!")
+                print("--------------------")
             continue
