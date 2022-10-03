@@ -27,7 +27,7 @@ while True:
                 print("You win!")
 
                 # Gain points
-                print("You gain",num,"points.")
+                print("You gain",num,"point(s).")
                 points += num
                 print("Current score:",points)
                 print("--------------------")
