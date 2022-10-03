@@ -30,7 +30,7 @@ while True:
                 
                 # Points
                 print("You gain 1 point.")
-                points += 1
+                points += (lim2 - lim1)
                 
                 print("Current score:",points)
                 print("--------------------")
