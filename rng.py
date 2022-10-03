@@ -14,6 +14,7 @@ while True:
     except ValueError:
         print("Invalid input!")
         print("Your input must be an integer!")
+        print("--------------------")
         continue
     else:
         # Check if the number is between 0 and 100
@@ -42,4 +43,5 @@ while True:
         else:
             print("Invalid input!")
             print("Your number must be inbetween 0 and 100!")
+            print("--------------------")
         continue
