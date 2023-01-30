@@ -11,32 +11,41 @@ while True:
         value = float(stig / max) * 100
 
         # Calculate grades
-        if value <= 6:
+        if 0 <= value <= 6:
             print("-3")
 
             print("--------------------")
         
-        elif 6 < value <= 34:
+        elif 6 < value <= 33:
             print("00")
             
             print("--------------------")
+
+        elif 33 < value <= 39:
+            print("02")
+            
+            print("--------------------")
         
-        elif 34 < value <= 40:
+        elif 39 < value <= 55:
             print("4")
             
             print("--------------------")
         
-        elif 40 < value <= 56:
+        elif 55 < value <= 75:
             print("7")
             
             print("--------------------")
         
-        elif 56 < value <= 76:
+        elif 75 < value <= 92:
             print("10")
             
             print("--------------------")
         
-        elif 76 < value:
+        elif 92 < value <= max:
             print("12")
             
+            print("--------------------")
+        else:
+            print("Invalid result!")
+
             print("--------------------")
