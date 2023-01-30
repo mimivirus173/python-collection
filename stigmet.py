@@ -4,7 +4,7 @@ while True:
         max = int(input("Max. stig: "))
         stig = int(input("Tíni stig: "))
     except ValueError:
-        print("Invalid input!")
+        print("Ógildað ílag!")
         print("--------------------")
     else:
         # Divide your points with the max
@@ -54,6 +54,6 @@ while True:
             print("--------------------")
         else:
             print("")
-            print("Invalid result!")
+            print("Ógildað svar!")
 
             print("--------------------")
