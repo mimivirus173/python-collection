@@ -1,7 +1,7 @@
 while True:
     # Check if input is an integer
     try:
-        max = int(input("Max stig: "))
+        max = int(input("Max. stig: "))
         stig = int(input("Tíni stig: "))
     except ValueError:
         print("Invalid input!")
