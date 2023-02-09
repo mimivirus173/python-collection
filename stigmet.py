@@ -47,7 +47,7 @@ while True:
             
             print("--------------------")
         
-        elif 92 < value <= max:
+        elif 92 < value <= 100:
             print("")
             print("12")
             
