@@ -1,4 +1,5 @@
-# credit to ChatGPT
+# helped by ChatGPT
+# this is still wack tho
 
 import time
 import threading
