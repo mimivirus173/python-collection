@@ -1,3 +1,5 @@
+# Brúkar stigmetið hjá alisfrøði
+
 while True:
     # Check if input is an integer
     try:
