@@ -1,9 +1,9 @@
-# made entirely by discor'd clyde ai bot
+# made majorly by discord's clyde ai bot
 
 import time
 import random
 
-print("Welcome to the Yhurr Counting Program!\n")
+print("Welcome to the Yhurr Counting Program!\nType 'help' to see available commands.")
 
 while True:
     count = 0
