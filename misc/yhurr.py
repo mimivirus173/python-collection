@@ -24,8 +24,7 @@ while True:
             print("\n*** Yhurr Counting Program Help ***")
             print("Enter 'yhurr' to add to the yhurr count.")
             print("Enter 'description' to view a physical definition of what a yhurr is.")
-            print(
-                "Enter 'random' to generate random text containing the letters 'y', 'h', 'u', and 'r'.")
+            print("Enter 'random' to generate random text containing the letters 'y', 'h', 'u', and 'r'.")
             print("Enter 'quiz' to take a quiz about yhurrs.")
             print("Enter 'stop' to end the program and see the final results.")
             print("Enter 'help' to display this help message again.")
