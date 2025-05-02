@@ -12,7 +12,7 @@ while True:
         # Divide your points with the max
         value = float(stig / max) * 100
 
-        # Calculate grades
+        # Calculate grades (alisfrøði skala)
         if 0 <= value <= 6:
             print("")
             print("-3")
