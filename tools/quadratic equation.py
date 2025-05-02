@@ -1,0 +1,36 @@
+import math
+
+# manual calculation of solutions
+def polynomial(a, b, c):
+    d = float((b**2) - (4*a*c))
+
+    if d < 0:
+        return "No real solution"
+    elif d == 0:
+        x = float(-b / 2*a)
+        return x
+    else:
+        x_1 = float((-b + math.sqrt(d)) / 2*a)
+        x_2 = float((-b - math.sqrt(d)) / 2*a)
+        return x_1, x_2
+
+## the program
+# intro text
+print("Calculator for quadratic equations with form \"ax^2 + bx + c = 0\"")
+print("--------------------")
+
+while True:
+    # define the variables of the equation
+    a = float(input("a = "))
+    b = float(input("b = "))
+    c = float(input("c = "))    
+    
+    # check for valid quadratic equation
+    if a == 0:
+        print("Invalid input!")
+        print("--------------------")
+    else:
+        # print the solution to the polynomial
+        solution = polynomial(a, b, c)
+        print(solution)
+        print("--------------------")
