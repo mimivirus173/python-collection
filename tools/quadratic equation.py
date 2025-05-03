@@ -1,7 +1,7 @@
 import math
 
 # manual calculation of solutions
-def polynomial(a, b, c):
+def quadratic_solver(a, b, c):
     d = float((b**2) - (4*a*c))
 
     if d < 0:
@@ -16,7 +16,7 @@ def polynomial(a, b, c):
 
 ## the program
 # intro text
-print("Calculator for quadratic equations with form \"ax^2 + bx + c = 0\"")
+print("Calculator for quadratic equations with form ax² + bx + c = 0")
 print("--------------------")
 
 while True:
@@ -36,6 +36,6 @@ while True:
         print("--------------------")
     else:
         # print the solution to the polynomial
-        solution = polynomial(a, b, c)
+        solution = quadratic_solver(a, b, c)
         print(solution)
         print("--------------------")
