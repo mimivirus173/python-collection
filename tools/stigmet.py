@@ -1,7 +1,7 @@
 # Brúkar stigmetið hjá alisfrøði
 
 while True:
-    # Check if input is an integer
+    # Kannar um eitt tal var skrivað
     try:
         max = int(input("Maks stig: "))
         stig = int(input("Tíni stig: "))
@@ -9,10 +9,10 @@ while True:
         print("Ógildað tal!")
         print("--------------------")
     else:
-        # Divide your points with the max
+        # Býtir tíni stig við max. stig
         value = float(stig / max) * 100
 
-        # Calculate grades (alisfrøði skala)
+        # Roknar karakter
         if 0 <= value <= 6:
             print("")
             print("-3")
