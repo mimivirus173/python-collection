@@ -1,4 +1,5 @@
 import math
+import keyboard
 
 # manual calculation of solutions
 def quadratic_solver(a, b, c):
@@ -39,3 +40,5 @@ while True:
         solution = quadratic_solver(a, b, c)
         print(solution)
         print("--------------------")
+    if keyboard.read_key() == 'esc':
+        exit()
