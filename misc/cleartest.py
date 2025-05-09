@@ -5,7 +5,9 @@ def clear_console() -> None:
     os.system("cls")
 
 while True:
-    print('\na' * 100)
+    for x in "banana":
+        print(x)
+
     answer = input('Clear console Y/N: ')
     if answer == 'Y' or answer == 'y':
         clear_console()
