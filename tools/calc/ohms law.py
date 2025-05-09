@@ -1,18 +1,15 @@
 def solveForV(I, R):
     # V = I * R
-    V = float(I * R)
-    return V
+    return I * R
 def solveForI(V, R):
     # I = V / R
-    I = float(V / R)
-    return I
+    return V / R
 def solveForR(V, I):
     # R = V / I
-    R = float(V / I)
-    return R
+    return V / I
 
-varChoice = input("Solve for V/I/R?: ")
-if varChoice.upper() == 'V':
+var_choice = input("Solve for V/I/R?: ").strip().upper()
+if var_choice == 'V':
     try:
         I = float(input("I = "))
         R = float(input("R = "))
@@ -21,7 +18,7 @@ if varChoice.upper() == 'V':
         exit(0)
     solution = solveForV(I, R)
     print("V =", solution, "V")
-elif varChoice.upper() == 'I':
+elif var_choice == 'I':
     try:
         V = float(input("V = "))
         R = float(input("R = "))
@@ -30,7 +27,7 @@ elif varChoice.upper() == 'I':
         exit(0)
     solution = solveForI(V, R)
     print("I =", solution, "A")
-elif varChoice.upper() == 'R':
+elif var_choice == 'R':
     try:
         V = float(input("V = "))
         I = float(input("I = "))
