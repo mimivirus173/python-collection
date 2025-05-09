@@ -1,10 +1,10 @@
 import os
 import keyboard
 
-def clear() -> None:
+def clear_console() -> None:
     os.system("cls")
 
 while True:
     print("\na"*100)
     if keyboard.read_key():
-        clear()
+        clear_console()
