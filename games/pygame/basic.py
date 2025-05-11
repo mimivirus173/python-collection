@@ -30,7 +30,7 @@ while run:
 
     # event handler
     for event in pygame.event.get():
-        if event.type == pygame.QUIT:
+        if event.type == pygame.QUIT or key[pygame.K_ESCAPE] == True:
             run = False
     
     # updates the screen
