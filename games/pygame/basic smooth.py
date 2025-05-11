@@ -18,6 +18,7 @@ while run:
     pygame.draw.rect(screen, (0, 255, 0), player)
 
     key = pygame.key.get_pressed()
+    
     # movement
     if key[pygame.K_a] == True: player.move_ip(-1, 0)
     elif key[pygame.K_d] == True: player.move_ip(1, 0)
