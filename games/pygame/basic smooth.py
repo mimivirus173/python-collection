@@ -2,30 +2,23 @@ import pygame
 
 pygame.init()
 
-SCREEN_WIDTH = 800
-SCREEN_HEIGHT = 800
+SCREEN_WIDTH = 1000
+SCREEN_HEIGHT = 1000
 
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
 # player
-player = pygame.Rect(400, 400, 50, 50)
+player = pygame.Rect((SCREEN_WIDTH/2), (SCREEN_HEIGHT/2), 50, 50)
 
 # player variables
-player_xvel = 0
-player_yvel = 0
-player_left = 0
-player_right = 0
-player_up = 0
-player_down = 0
+player_xvel = player_yvel = 0
+player_left = player_right = player_up = player_down = 0
 
 # smooth movement
 def movement_phys(speed, friction):
-    global player_xvel
-    global player_yvel
-    global player_left
-    global player_right
-    global player_up
-    global player_down
+    # global variables because python
+    global player_xvel, player_yvel
+    global player_left, player_right, player_up, player_down
     
     player_xvel += (player_right + (0 - player_left)) * speed
     player_xvel = player_xvel * friction
@@ -51,7 +44,6 @@ while run:
     player_down = key[pygame.K_s]
 
     movement_phys(3, 0.9)
-
     player.move_ip(player_xvel, player_yvel)
 
     # event handler
