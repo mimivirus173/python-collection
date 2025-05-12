@@ -15,30 +15,29 @@ def quadratic_solver(a, b, c):
         x_2 = float(((-b) - math.sqrt(d)) / (2*a))
         return x_1, x_2
 
-## the program
-# intro text
-print("Calculator for quadratic equations with form ax² + bx + c = 0")
-print("--------------------")
+def main():
+    print("Calculator for quadratic equations with form ax² + bx + c = 0")
+    print("--------------------")
 
-while True:
-    # define the variables of the equation and check if they are numbers
-    try:
-        a = float(input("a = "))
-        b = float(input("b = "))
-        c = float(input("c = "))    
-    except ValueError:
-        print("Invalid input! 'a', 'b' and 'c' must be numbers.")
-        print("--------------------")
-        continue
-    
-    # check for valid quadratic equation
-    if a == 0:
-        print("Invalid input! 'a' cannot be zero.")
-        print("--------------------")
-    else:
-        # print the solution to the polynomial
-        solution = quadratic_solver(a, b, c)
-        print(solution)
-        print("--------------------")
-    if keyboard.read_key() == 'esc':
-        exit()
+    while True:
+        try:
+            a = float(input("a = "))
+            b = float(input("b = "))
+            c = float(input("c = "))    
+        except ValueError:
+            print("Invalid input! 'a', 'b' and 'c' must be numbers.")
+            print("--------------------")
+            continue
+        
+        # check for valid quadratic equation
+        if a == 0:
+            print("Invalid input! 'a' cannot be zero.")
+            print("--------------------")
+        else:
+            # print the solution to the polynomial
+            solution = quadratic_solver(a, b, c)
+            print(solution)
+            print("--------------------")
+
+if __name__ == '__main__':
+    main()
