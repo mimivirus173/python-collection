@@ -33,7 +33,7 @@ while run:
     clock.tick(60)  # cap to 60 FPS for consistency
     screen.fill((0, 0, 0))
 
-    pygame.draw.rect(screen, (0, 255, 0), player)
+    pygame.draw.rect(screen, (255, 255, 255), player)
 
     key = pygame.key.get_pressed()
     
