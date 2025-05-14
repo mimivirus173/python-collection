@@ -99,7 +99,6 @@ def main():
             stig = int(input("Tíni stig: "))
         except ValueError:
             print("Ógildað tal!")
-             
         else:
             alf_stigmet(max, stig)
     elif fak_val == "evf":
@@ -108,7 +107,6 @@ def main():
             stig = int(input("Tíni stig: "))
         except ValueError:
             print("Ógildað tal!")
-             
         else:
             evf_stigmet(max, stig)
     elif fak_val == "stø":
@@ -117,7 +115,6 @@ def main():
             stig = int(input("Tíni stig: "))
         except ValueError:
             print("Ógildað tal!")
-             
         else:
             stø_stigmet(max, stig)
     else:
