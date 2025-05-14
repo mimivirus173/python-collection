@@ -38,10 +38,10 @@ while run:
     key = pygame.key.get_pressed()
     
     # update directional inputs
-    player_left = key[pygame.K_a]
-    player_right = key[pygame.K_d]
-    player_up = key[pygame.K_w]
-    player_down = key[pygame.K_s]
+    player_left = key[pygame.K_a] or key[pygame.K_LEFT]
+    player_right = key[pygame.K_d] or key[pygame.K_RIGHT]
+    player_up = key[pygame.K_w] or key[pygame.K_UP]
+    player_down = key[pygame.K_s] or key[pygame.K_DOWN]
 
     movement_phys(3, 0.9)
     player.move_ip(player_xvel, player_yvel)
