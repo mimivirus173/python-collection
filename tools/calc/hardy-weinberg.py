@@ -14,7 +14,14 @@ def calculate_freqs(q2):
             f"Frequency of dominant phenotype: {((p**2)+(2*p*q)):.3f}"
 
 def main():
-    q2 = float(input("Frequency of recessive allele (%): "))
+    try:
+        q2 = float(input("Frequency of recessive allele (%): "))  
+    except ValueError:
+        print("Invalid input!")
+        exit(0)
+    if q2 < 0 or q2 > 100:
+        print("Invalid input!")
+        exit(0) 
     print(' ')
     print(calculate_freqs(q2))
 
