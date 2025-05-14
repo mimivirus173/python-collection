@@ -4,9 +4,9 @@ cls
 title Available options
 echo Pygame: basic, smooth movement test 
 echo Other games: guessnum, rng
-echo Misc: cleartest, keypressnum, keyreg, percentage bar
-echo Calcs: hardy-weinberg, ohms law, quadratic equation
-echo Other tools: ammonia temp scale, passgen, stigmet
+echo Miscellaneous: cleartest, keypressnum, keyreg, percentage bar
+echo Calculators: ammonia temp scale, hardy-weinberg, ohms law, quadratic equation, stigmet
+echo Other tools: passgen
 echo:
 set /p choice=Choose: 
 cls
