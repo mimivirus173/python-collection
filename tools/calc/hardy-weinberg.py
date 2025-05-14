@@ -3,7 +3,7 @@
 
 import math
 
-def find_p(res):
+def calculate_freqs(res):
     q = float(math.sqrt(res / 100))
     p = float(1 - q)
     return  f"Frequency of dominant allele: {p:.3f}\n" \
@@ -16,7 +16,7 @@ def find_p(res):
 def main():
     res = float(input("Frequency of recessive allele (%): "))
     print(' ')
-    print(find_p(res))
+    print(calculate_freqs(res))
 
 if __name__ == '__main__':
     main()
