@@ -9,8 +9,8 @@ def calculate_freqs(q2):
     return  f"Frequency of dominant allele: {(p * 100):.3f}%\n" \
             f"Frequency of recessive allele: {(q * 100):.3f}%\n" \
             f"Frequency of dominant homozygotes: {(p**2 * 100):.3f}%\n" \
-            f"Frequency of heterozygotes: {(2*p*q * 100):.3f}%\n" \
-            f"Frequency of dominant phenotype: {((p**2)+(2*p*q) * 100):.3f}%"
+            f"Frequency of heterozygotes: {((2*p*q) * 100):.3f}%\n" \
+            f"Frequency of dominant phenotype: {(((p**2)+(2*p*q)) * 100):.3f}%"
 
 def main():
     try:
