@@ -1,122 +1,87 @@
+# function checks if input is float
+def to_float(n):
+    try:
+        return float(n)
+    except ValueError:
+        return None
+
 def alf_stigmet(max, stig):
     # Brúkar stigmetið hjá alisfrøði
+    if max <= 0 or stig < 0:
+        print("\nÓgildað svar!")
+        return
 
-    value = float(stig / max) * 100
-
-    # Roknar karakter
-    if 0 <= value <= 6:
-        print("")
-        print("-3")  
-    elif 6 < value <= 33:
-        print("")
-        print("00")
-    elif 33 < value <= 39:
-        print("")
-        print("02")    
-    elif 39 < value <= 55:
-        print("")
-        print("4")
-    elif 55 < value <= 75:
-        print("")
-        print("7")
-    elif 75 < value <= 92:
-        print("")
-        print("10")
-    elif 92 < value <= 100:
-        print("")
-        print("12")
-    else:
-        print("")
-        print("Ógildað svar!")
+    virði = float(stig / max) * 100
+    meting = [
+        (6, "-3"), (33, "00"), (39, "02"), 
+        (55, "4"), (75, "7"), (92, "10"), 
+        (100, "12")
+    ]
+    for mark, karakter in meting:
+        if virði <= mark:
+            print(f"\n{karakter}")
+            return
+    print("\nÓgildað svar!")
 
 def evf_stigmet(max, stig):
     # Brúkar stigmetið hjá evnafrøði
+    if max <= 0 or stig < 0:
+        print("\nÓgildað svar!")
+        return
 
-    value = float(stig / max) * 100
-
-    # Roknar karakter
-    if 0 <= value <= 9:
-        print("")
-        print("-3")
-    elif 9 < value <= 44:
-        print("")
-        print("00")
-    elif 44 < value <= 57:
-        print("")
-        print("02")
-    elif 57 < value <= 67:
-        print("")
-        print("4")
-    elif 67 < value <= 79:
-        print("")
-        print("7")
-    elif 79 < value <= 95:
-        print("")
-        print("10")
-    elif 95 < value <= 100:
-        print("")
-        print("12")
-    else:
-        print("")
-        print("Ógildað svar!")     
+    virði = float(stig / max) * 100
+    meting = [
+        (9, "-3"), (44, "00"), (57, "02"), 
+        (67, "4"), (79, "7"), (95, "10"), 
+        (100, "12")
+    ]
+    for mark, karakter in meting:
+        if virði <= mark:
+            print(f"\n{karakter}")
+            return
+    print("\nÓgildað svar!")
 
 def stø_stigmet(max, stig):
     # Brúkar stigmetið hjá støddfrøði
+    if max <= 0 or stig < 0:
+        print("\nÓgildað svar!")
+        return
 
-    value = float(stig / max) * 100
-
-    # Roknar karakter
-    if 0 <= value <= 8:
-        print("")
-        print("-3")
-    elif 8 < value <= 33:
-        print("")
-        print("00")
-    elif 33 < value <= 40:
-        print("")
-        print("02")
-    elif 40 < value <= 56:
-        print("")
-        print("4")
-    elif 56 < value <= 77:
-        print("")
-        print("7")
-    elif 77 < value <= 91:
-        print("")
-        print("10")
-    elif 91 < value <= 100:
-        print("")
-        print("12")
-    else:
-        print("")
-        print("Ógildað svar!")     
+    virði = float(stig / max) * 100
+    meting = [
+        (8, "-3"), (33, "00"), (40, "02"), 
+        (56, "4"), (77, "7"), (91, "10"), 
+        (100, "12")
+    ]
+    for mark, karakter in meting:
+        if virði <= mark:
+            print(f"\n{karakter}")
+            return
+    print("\nÓgildað svar!")
 
 def main():
     fak_val = input("alf, evf ella stø?: ").strip().lower()
     if fak_val == "alf":
-        try:
-            max = int(input("Maks stig: "))
-            stig = int(input("Tíni stig: "))
-        except ValueError:
-            print("Ógildað tal!")
-        else:
+        if ((max := to_float(input("Maks stig: "))) is not None and
+            (stig := to_float(input("Tíni stig: "))) is not None):
             alf_stigmet(max, stig)
+        else:
+            print("Invalid input!")
+            exit(0)
     elif fak_val == "evf":
-        try:
-            max = int(input("Maks stig: "))
-            stig = int(input("Tíni stig: "))
-        except ValueError:
-            print("Ógildað tal!")
-        else:
+        if ((max := to_float(input("Maks stig: "))) is not None and
+            (stig := to_float(input("Tíni stig: "))) is not None):
             evf_stigmet(max, stig)
-    elif fak_val == "stø":
-        try:
-            max = int(input("Maks stig: "))
-            stig = int(input("Tíni stig: "))
-        except ValueError:
-            print("Ógildað tal!")
         else:
+            print("Invalid input!")
+            exit(0)
+    elif fak_val == "stø":
+        if ((max := to_float(input("Maks stig: "))) is not None and
+            (stig := to_float(input("Tíni stig: "))) is not None):
             stø_stigmet(max, stig)
+        else:
+            print("Invalid input!")
+            exit(0)
     else:
         print("Ógildað val!")
         exit(0)
