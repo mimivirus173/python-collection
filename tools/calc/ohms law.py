@@ -1,42 +1,30 @@
-def solveForV(I, R):
-    # V = I * R
-    return I * R
-def solveForI(V, R):
-    # I = V / R
-    return V / R
-def solveForR(V, I):
-    # R = V / I
-    return V / I
+# function checks if input is float
+def to_float(n):
+    try:
+        return float(n)
+    except ValueError:
+        return None
 
 def main():
-    var_choice = input("Solve for V/I/R?: ").strip().upper()
-    if var_choice == 'V':
-        try:
-            I = float(input("I = "))
-            R = float(input("R = "))
-        except ValueError:
+    choice = input("Solve for V/I/R?: ").strip().upper()
+    if choice == 'V':
+        if (I := to_float(input("I = "))) is not None and (R := to_float(input("R = "))) is not None:
+            print(f"V = {I * R} V")
+        else:
             print("Invalid input!")
             exit(0)
-        solution = solveForV(I, R)
-        print("V =", solution, "V")
-    elif var_choice == 'I':
-        try:
-            V = float(input("V = "))
-            R = float(input("R = "))
-        except ValueError:
+    elif choice == 'I':
+        if (V := to_float(input("V = "))) is not None and (R := to_float(input("R = "))) is not None:
+            print(f"I = {V / R} A")
+        else:
             print("Invalid input!")
             exit(0)
-        solution = solveForI(V, R)
-        print("I =", solution, "A")
-    elif var_choice == 'R':
-        try:
-            V = float(input("V = "))
-            I = float(input("I = "))
-        except ValueError:
+    elif choice == 'R':
+        if (V := to_float(input("V = "))) is not None and (I := to_float(input("I = "))) is not None:
+            print(f"R = {V / I} Ω")
+        else:
             print("Invalid input!")
             exit(0)
-        solution = solveForR(V, I)
-        print("R =", solution, "Ω")
     else:
         print("Invalid input!")
         exit(0)

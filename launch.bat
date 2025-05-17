@@ -20,7 +20,6 @@ if "%choice%"=="keypressnum" goto keypressnum
 if "%choice%"=="keyreg" goto keyreg
 if "%choice%"=="percentage bar" goto percentage_bar
 if "%choice%"=="hardy-weinberg" goto hardy_weinberg
-if "%choice%"=="ohms lambda" goto ohms_lambda
 if "%choice%"=="ohms law" goto ohms_law
 if "%choice%"=="quadratic equation" goto quadratic_equation
 if "%choice%"=="ammonia temp scale" goto ammonia_temp_scale
@@ -74,11 +73,6 @@ goto end
 :hardy_weinberg
 title hardy-weinberg.py
 python "tools/calc/hardy-weinberg.py"
-goto end
-
-:ohms_lambda
-title ohms law.py
-python "tools/calc/ohms lambda.py"
 goto end
 
 :ohms_law
